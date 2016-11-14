@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="427.0" prefWidth="558.0" stylesheets="@FlatBee.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.karlthebee.flatbee.FlatBeeController">
+   <center>
+      <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="FlatBee">
+               <content>
+                  <VBox id="bordered" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="h1" text="FlatBee" />
+                        <Separator prefWidth="200.0" />
+                        <Label text="Hello and welcome to our FlatBee example.&#10;Here you can see various containers, controls, menus, etc." wrapText="true" />
+                        <Separator prefWidth="200.0" />
+                        <Hyperlink text="https://github.com/karlthebee/flatbee" />
+                        <Hyperlink text="https://twitter.com/karlthebee" />
+                        <Hyperlink text="karlthebee@gmail.com" />
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Buttons">
+               <content>
+                  <VBox id="bordered" mouseTransparent="true" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="h1" text="Buttons" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Standard" />
+                        <HBox id="bordered">
+                           <children>
+                              <Button mnemonicParsing="false" text="Standard" />
+                              <Button disable="true" mnemonicParsing="false" text="Disabled" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+                              <ToggleButton mnemonicParsing="false" selected="true" text="ToggleButton" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Default" />
+                        <HBox id="bordered">
+                           <children>
+                              <Button defaultButton="true" mnemonicParsing="false" text="Standard" />
+                              <Button defaultButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Cancel" />
+                        <HBox id="bordered">
+                           <children>
+                              <Button cancelButton="true" mnemonicParsing="false" text="Standard" />
+                              <Button cancelButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content></Tab>
+          <Tab text="Labels">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Labels" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Label Types" />
+                        <Label text="FlatBee offers three different kinds of custom labels, which you can select via an id  :&#10;     1. h1 : An label for headlines (like the &quot;Labels&quot; label)&#10;     2. h2 : An bigger label (like &quot;Label Types&quot;)&#10;     3. The normal label (like this!)&#10;     4. h4 : An very small info label" wrapText="true" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h3" text="And the h4 label is very small!" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Checkboxes">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Checkboxes" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="CheckBoxes" />
+                        <HBox id="bordered">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Standard" />
+                              <CheckBox mnemonicParsing="false" selected="true" text="Selected" />
+                              <CheckBox indeterminate="true" mnemonicParsing="false" text="Indeterminate" />
+                           </children>
+                        </HBox>
+                        <HBox id="bordered">
+                           <children>
+                              <CheckBox disable="true" mnemonicParsing="false" text="Standard" />
+                              <CheckBox disable="true" mnemonicParsing="false" selected="true" text="Selected" />
+                              <CheckBox disable="true" indeterminate="true" mnemonicParsing="false" text="Indeterminate" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="RadioButtons">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="RadioButtons" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="RadioButtons" />
+                        <HBox id="bordered">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="Standard" />
+                              <RadioButton mnemonicParsing="false" selected="true" text="Selected" />
+                           </children>
+                        </HBox>
+                        <HBox id="bordered">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="Standard" />
+                              <RadioButton mnemonicParsing="false" selected="true" text="Selected" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Progress">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Progress" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Progressbar" />
+                        <HBox id="bordered">
+                           <children>
+                              <ProgressBar prefWidth="200.0" />
+                              <ProgressBar prefWidth="200.0" progress="0.5" />
+                           </children>
+                        </HBox>
+                        <HBox id="bordered">
+                           <children>
+                              <ProgressBar disable="true" prefWidth="200.0" />
+                              <ProgressBar disable="true" prefWidth="200.0" progress="0.5" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Progress indicator" />
+                        <HBox id="bordered">
+                           <children>
+                              <ProgressIndicator prefHeight="26.0" prefWidth="28.0" />
+                              <ProgressIndicator progress="0.5" />
+                           </children>
+                        </HBox>
+                        <HBox id="bordered" />
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Input">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Input" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="TextField" />
+                        <HBox id="bordered">
+                           <children>
+                              <TextField promptText="Ipsum Lorem" />
+                              <Spinner editable="true" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="TextArea" />
+                        <TextArea prefHeight="44.0" prefWidth="537.0" promptText="Lorem ipsum" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="PasswordField" />
+                        <HBox id="bordered">
+                           <children>
+                              <PasswordField promptText="Ipsum Ipsum" />
+                              <PasswordField disable="true" promptText="Lorem ipsum!" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Menu">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Menu" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Menu" />
+                        <MenuBar>
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Lorem">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Isum" />
+                                    <Menu mnemonicParsing="false" text="Lorem">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Isum" />
+                                       </items>
+                                    </Menu>
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Isum">
+                              <items>
+                                    <RadioMenuItem mnemonicParsing="false" selected="true" text="RadioItems!" />
+                                    <RadioMenuItem mnemonicParsing="false" selected="true" text="Listen to radio" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <RadioMenuItem mnemonicParsing="false" text="IPSUM!" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Help">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                              </items>
+                            </Menu>
+                              <Menu mnemonicParsing="false" text="sudo">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="sudo kill -9" />
+                                 </items>
+                              </Menu>
+                          </menus>
+                        </MenuBar>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="MenuButtons" />
+                        <HBox id="bordered">
+                           <children>
+                              <MenuButton mnemonicParsing="false" text="MenuButton">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                              </MenuButton>
+                              <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                              </SplitMenuButton>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Slider">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Slider" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Horizontal Slider" />
+                        <Slider />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Vertical Slider" />
+                        <HBox id="bordered">
+                           <children>
+                              <Slider orientation="VERTICAL" value="0.815" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <FlowPane fx:id="colorBox" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

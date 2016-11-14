@@ -1,0 +1,304 @@
+/*
+*		FLATBEE by KarlTheBee´
+* An javafx css style for smooth and flat guis
+*
+*	Version 0.0.1     
+*
+*/
+
+/*
+	* These are values you can edit safely.
+	The "color" is your main color (in this case greenish),
+	the accent is your accent color (default dark blueish)
+	*/
+* {
+	-color : #2ecc71;
+	-accent : #34495e;
+	-white : #efefef;
+	-gray : #dfdfdf;
+	-black : #444444dd;
+	-abort : #e74c3c;
+}
+
+.root{
+	-fx-background-color : -white;
+	-fx-fill-width : true;
+	-fx-color : -color;
+	-fx-fill-width : true;
+	-fx-font-family: 'Segoe UI';
+	-fx-focus-color : transparent;
+	-fx-faint-focus-color: transparent;
+}
+
+.scroll-pane>*.scroll-bar:vertical{
+	-fx-background-color : -gray;
+}
+
+#bordered{
+	-fx-spacing : 12.0;
+	-fx-padding : 10;
+	-fx-hgap : 10;
+	-fx-vgap : 10;
+}
+
+/*
+ * **********
+ * LABELS
+ * **********
+ * 
+ * Including a big, medium and small label. The default label is between the medium and small one
+ */
+.label{
+	 -fx-text-fill : -black;
+ }
+ 
+#h1 {
+	-fx-font-size : 32.0;
+	-fx-font-weight: bold;
+	
+}
+#h2 {
+	-fx-font-size : 20.0;
+}
+
+#h3 {
+	-fx-font-size : 10.0;
+}
+
+
+
+/*
+ * **********
+ * BUTTONS
+ * **********
+ * 
+ */
+.button {
+	-fx-background-color : -gray;
+}
+
+.button:default{
+	-fx-background-color : -color;
+}
+
+.button:cancel{
+	-fx-background-color : -abort;
+}
+.button:selected{
+	-fx-background-color : derive(-gray,-20%);
+}
+
+.toggle-button{
+	-fx-background-color : -color;
+}
+
+.toggle-button{
+	-fx-background-color : -gray;
+}
+
+.toggle-button:selected{
+	-fx-background-color : derive(-gray,-20%);
+}
+
+.menu-button{
+	-fx-background-color : -gray;
+}
+
+.split-menu-button{
+	-fx-background-color : -gray;
+}
+
+.split-menu-button>*.label{
+	-fx-background-color : -gray;
+}
+
+.split-menu-button>*.arrow-button{
+	-fx-background-color : -gray;
+}
+
+
+/*
+ * **********
+ * PROGRESSBAR
+ * **********
+ * 
+ */
+.progress-indicator {
+	-fx-indeterminate-segment-count : 12;
+	-fx-progress-color : -color;
+	-fx-spin-enabled : true;
+}
+
+.progress-bar>*.bar{
+	 -fx-background-color : -color;
+ }
+ 
+.progress-bar>*.track{
+	 -fx-background-color : -gray;
+ }
+ 
+.progress-bar:determinate>*.determinate-indicator>*.track{
+	 -fx-background-color : -gray;
+ }
+
+.progress-bar:determinate>*.determinate-indicator>*.indicator{
+	 -fx-background-color : -gray;
+ }
+
+ 
+/*
+ * **********
+ * SLIDER
+ * **********
+ * 
+ */
+ .slider>*.track{
+	 -fx-background-color : -gray;
+ }
+
+/*
+ * **********
+ * COMBOBOX
+ * **********
+ * 
+ */
+.combo-box {
+	-fx-background-color : -gray;
+}
+
+.check-box>*.box{
+	-fx-background-color : -color;
+}
+
+.radio-button>*.radio {
+	-fx-background-color : -color;
+}
+
+/*
+ * **********
+ * TABPANE
+ * **********
+ * 
+ */
+ .tab-pane:top>*.tab-header-area{
+	 -fx-padding : 0,0,0,0;
+ }
+.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:selected:top{
+	-fx-padding : 6,6,6,6;
+	-fx-text-fill : -white;
+	-fx-background-color : -color;
+}
+.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:selected>*.tab-container>*.tab-label{
+	-fx-font-size : 13.0;
+	-fx-font-weight: bold;
+}
+
+.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:top{
+	-fx-padding : 4,4,4,4;
+	-fx-text-fill : -white;
+	-fx-background-color : -white;
+}
+
+
+/*
+ * **********
+ * MENU
+ * **********
+ * 
+ */
+.menu-bar{
+	-fx-background-color : -gray;
+}
+ 
+ 
+/*
+ * **********
+ * SLIDER
+ * **********
+ * 
+ */
+.slider>*.axis:bottom{
+	-fx-tick-label-font-family : '5by7';
+}
+
+.slider>*.thumb{
+	-fx-background-color : -color;
+}
+
+/*
+ * **********
+ * Checkbox
+ * **********
+ * 
+ */
+ .check-box>*.box{
+	 -fx-background-color : -gray;
+ }
+ 
+ .check-box:selected>*.box>*.mark{
+	 -fx-background-color : -black;
+ }
+.check-box:indeterminate>*.box>*.mark{
+	 -fx-background-color : -black;
+ }
+ 
+ 
+ /*
+ * **********
+ * RADIO BUTTONS
+ * **********
+ * 
+ */
+ .radio-button>*.radio{
+	-fx-background-color : -gray; 
+ }
+ 
+ .radio-button:selected>*.radio>*.dot{
+	 -fx-background-color : -black;
+ }
+ 
+/*
+ * **********
+ * Text fields / inputs
+ * **********
+ * 
+ */
+.text-field{
+	-fx-highlight-fill : -color;
+	-fx-highlight-text-fill : -white;
+}
+
+.text-area{
+	-fx-highlight-fill : -color;
+	-fx-highlight-text-fill : -white;
+}
+ 
+.spinner>*.increment-arrow-button{
+	-fx-background-color : -gray;
+}
+
+.spinner>*.decrement-arrow-button{
+	-fx-background-color : -gray;
+}
+/*
+ * **********
+ * Titled Pane
+ * **********
+ * 
+ */
+
+.first-titled-pane:expanded>*.title{
+	-fx-background-color : -color;
+}
+
+.titled-pane:expanded>*.title{
+	-fx-background-color : -color;
+}
+
+.titled-pane:collapsed>*.title{
+	-fx-background-color : -gray;
+}
+
+.titled-pane*>*.title>*.arrow-button>*.arrow{
+	-fx-background-color : -black;
+}
