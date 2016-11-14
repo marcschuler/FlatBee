@@ -13,7 +13,6 @@
 	*/
 * {
 	-color : #2ecc71;
-	-accent : #34495e;
 	-white : #efefef;
 	-gray : #dfdfdf;
 	-black : #444444dd;
@@ -155,6 +154,13 @@
  .slider>*.track{
 	 -fx-background-color : -gray;
  }
+.slider>*.axis:bottom{
+	-fx-tick-label-font-family : '5by7';
+}
+
+.slider>*.thumb{
+	-fx-background-color : -color;
+}
 
 /*
  * **********
@@ -210,20 +216,6 @@
 	-fx-background-color : -gray;
 }
  
- 
-/*
- * **********
- * SLIDER
- * **********
- * 
- */
-.slider>*.axis:bottom{
-	-fx-tick-label-font-family : '5by7';
-}
-
-.slider>*.thumb{
-	-fx-background-color : -color;
-}
 
 /*
  * **********
