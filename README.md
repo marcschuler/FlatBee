@@ -2,7 +2,9 @@
 An JavaFX css style which creates an smooth looking and flat user experience.
 
 ## Previews
-(coming soon)
+![alt tag](src/test/resources/buttons.png)
+![alt tag](src/test/resources/checkbox.png)
+![alt tag](src/test/resources/progressbar.png)
 
 ## License
 
