@@ -6,6 +6,7 @@ Still very work in progress but you can join me :)
 ![alt tag](src/test/resources/img/buttons.png)
 ![alt tag](src/test/resources/img/checkbox.png)
 ![alt tag](src/test/resources/img/progressbar.png)
+![alt tag](src/test/resources/img/slider.png)
 
 ## How-To Theme
 - Change the basic color : Change the -color value at the first lines of the css file
