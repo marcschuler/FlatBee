@@ -1,20 +1,25 @@
 /*
 *		FLATBEE by KarlTheBee´
-* An javafx css style for smooth and flat guis
+* An javafx css style for a smooth & flat user interface
+* Website : github.com/karlthebee/flatbee
 *
-*	Version 0.0.1
+*	Version 16.12.0
 *
+* The license is pretty much a CC-BY-NC 4.0 license (https://creativecommons.org/licenses/by-nc/4.0/).
+* You can modify,use and share it (and ship it with your application), as long as you don't sell the file 
+* (or the application which includes the file).
+* You also have to give me credit, like "FlatBee theme by karlthebee (github.com/karlthebee/flatbee)"
 */
 
 /*
 	* These are values you can edit safely.
-	The "color" is your main color (in this case greenish),
-	the accent is your accent color (default dark blueish)
+	The "color" is your main color (in this case greenish)
 	*/
 * {
 	-color : #2ecc71;
 	-white : #efefef;
 	-gray : #dfdfdf;
+	-darkGray : derive(-gray,-20%);
 	-black : #444444dd;
 	-abort : #e74c3c;
 }
@@ -73,30 +78,36 @@
  * 
  */
 .button {
-	-fx-background-color : -gray;
+	-fx-background-color : -gray,-gray,-gray,-gray;
 }
-
 .button:default{
 	-fx-background-color : -color;
 }
-
 .button:cancel{
 	-fx-background-color : -abort;
 }
-.button:selected{
-	-fx-background-color : derive(-gray,-20%);
+
+.button:focused {
+   -fx-background-color : -darkGray;
+   -fx-focus-color : -darkGray;
+}
+.button:hover {
+    -fx-color: -darkGray;
+	-fx-inner-border : -darkGray;
+	-fx-body-color : -darkGray;
 }
 
-.toggle-button{
-	-fx-background-color : -color;
+.button:armed {
+    -fx-color: -white;
 }
+
 
 .toggle-button{
 	-fx-background-color : -gray;
 }
 
 .toggle-button:selected{
-	-fx-background-color : derive(-gray,-20%);
+	-fx-background-color : -darkGray;
 }
 
 .menu-button{
@@ -143,8 +154,24 @@
 .progress-bar:determinate>*.determinate-indicator>*.indicator{
 	 -fx-background-color : -gray;
  }
-
  
+ /*
+ * **********
+ * DATE PICKER
+ * **********
+ * 
+ */
+.date-picker{
+	-fx-background-color : -white,-gray,gray;
+}
+
+.date-picker>*.arrow-button{
+	-fx-background-color : -white,-gray,-gray;
+}
+ 
+ .date-picker>*.arrow-button>*.arrow{
+	-fx-background-color : -darkGray, -black;
+}
 /*
  * **********
  * SLIDER
@@ -155,7 +182,7 @@
 	 -fx-background-color : -gray;
  }
 .slider>*.axis:bottom{
-	-fx-tick-label-font-family : '5by7';
+	-fx-tick-label-font-family : 'Segoe UI';
 }
 
 .slider>*.thumb{
@@ -176,9 +203,6 @@
 	-fx-background-color : -color;
 }
 
-.radio-button>*.radio {
-	-fx-background-color : -color;
-}
 
 /*
  * **********
@@ -186,23 +210,31 @@
  * **********
  * 
  */
- .tab-pane:top>*.tab-header-area{
+ .tab-pane>*.tab-header-area{
 	 -fx-padding : 0,0,0,0;
  }
-.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:selected:top{
+.tab-pane>*.tab-header-area>*.headers-region>*.tab:selected:top{
 	-fx-padding : 6,6,6,6;
 	-fx-text-fill : -white;
 	-fx-background-color : -color;
 }
-.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:selected>*.tab-container>*.tab-label{
+.tab-pane>*.tab-header-area>*.headers-region>*.tab:selected>*.tab-container>*.tab-label{
 	-fx-font-size : 13.0;
 	-fx-font-weight: bold;
 }
 
-.tab-pane:top>*.tab-header-area>*.headers-region>*.tab:top{
+.tab-pane>*.tab-header-area>*.headers-region>*.tab:top{
 	-fx-padding : 4,4,4,4;
 	-fx-text-fill : -white;
 	-fx-background-color : -white;
+}
+
+.tab-pane>*.tab-header-area>*.control-buttons-tab>*.container>*.tab-down-button{
+	-fx-background-color : -white;
+}
+
+.tab-pane>*.tab-header-area>*.control-buttons-tab>*.container>*.tab-down-button>*.arrow{
+	-fx-background-color : -darkGray;
 }
 
 
@@ -293,4 +325,60 @@
 
 .titled-pane*>*.title>*.arrow-button>*.arrow{
 	-fx-background-color : -black;
+}
+
+/*
+ * **********
+ * Table
+ * **********
+ * 
+ */
+.table-view:row-selection{
+	-fx-background-color : -gray;
+}
+
+.table-view:row-selection>*.column-header-background{
+	-fx-background-color : -white;
+}
+
+.table-view>*.column-resize-line{
+	-fx-background-color : -black;
+}
+
+.table-view>*.column-header-background>*.nested-column-header>*.table-column{
+	-fx-background-color : -darkGray, -white;
+}
+
+.table-view>*.column-header-background>*.filler{
+	-fx-background-color : -darkGray, -gray;
+}
+
+.table-view>*.column-header-background>*.show-hide-columns-button{
+	-fx-background-color : -gray;
+}
+
+
+
+.tree-table-view:row-selection{
+	-fx-background-color : -gray;
+}
+
+.tree-table-view:row-selection>*.column-header-background{
+	-fx-background-color : -white;
+}
+
+.tree-table-view>*.column-resize-line{
+	-fx-background-color : -black;
+}
+
+.tree-table-view>*.column-header-background>*.nested-column-header>*.table-column{
+	-fx-background-color : -darkGray, -white;
+}
+
+.tree-table-view>*.column-header-background>*.filler{
+	-fx-background-color : -darkGray, -gray;
+}
+
+.tree-table-view>*.column-header-background>*.show-hide-columns-button{
+	-fx-background-color : -gray;
 }

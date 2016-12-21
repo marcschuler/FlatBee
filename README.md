@@ -1,27 +1,35 @@
 # FlatBee
-An flat and smooth looking css theme for JavaFX.
-Still very work in progress but you can join me :)
+A flat and smooth looking css theme for JavaFX.
+Already includes most used UI elements, but still very work in progress.
 
 ## Preview
 ![alt tag](src/test/resources/img/buttons.png)
 ![alt tag](src/test/resources/img/checkbox.png)
 ![alt tag](src/test/resources/img/progressbar.png)
 ![alt tag](src/test/resources/img/slider.png)
-
+![alt tag](src/test/resources/img/tableview.png)
 ## How-To Theme
-- Change the basic color : Change the -color value at the first lines of the css file
-- set a nice border to a pane : set the id "bordered" to the pane
-- set different label sizes : set the id "h1" (for really big labels), "h2" (for big labels") and "h3" for very small labels
+- Change the basic theme color : Change the "-color" value in the theme at around line 14
+- Different html-like text sizes are available and in descending size : "h1", "h2", <standard>, "h3"
+- There's a "bordered" pane which sets an nice padding and spacing for an pane
 
 
 ## Progress
-- All kinds of buttons look nice
-- Progresses looks okayish
-- Slider works
-- Tabpane looks nice
-- Radioboxes & Checkboxes do work
+Should work :
+- Labels
+- Buttons (including toogle- & split-buttons)
+- Progressbars & Progressindicators
+- Datepicker
+- Slider
+- Comboboxes
+- Tabpanes & Tabs
+- Checkboxes & Radiobuttons
+- TextFields, Inputs, Spinner
+- (Tree-)Tables
 
-- Other things may look ugly
+Does not work : 
+- Not all default javafx8 nodes styled
+- Many nodes may look ugly and to green-ish
 
 
 ## License

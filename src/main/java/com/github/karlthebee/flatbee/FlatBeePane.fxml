@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -20,9 +21,13 @@
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -48,6 +53,46 @@
                   </VBox>
                </content>
             </Tab>
+            <Tab text="Quick Preview">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Quick Preview" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="Register" />
+                        <VBox id="bordered">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Username : " />
+                                    <TextField />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Password : " />
+                                    <PasswordField />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Date of Birth : " />
+                                    <DatePicker prefHeight="10.0" prefWidth="174.0" promptText="Bots : No lying!" showWeekNumbers="true" />
+                                 </children>
+                              </HBox>
+                              <HBox id="bordered">
+                                 <children>
+                                    <Button cancelButton="true" mnemonicParsing="false" text="Cancel" />
+                                    <Button defaultButton="true" mnemonicParsing="false" text="Register" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
             <Tab text="Buttons">
                <content>
                   <VBox id="bordered" mouseTransparent="true" prefHeight="200.0" prefWidth="100.0">
@@ -59,6 +104,7 @@
                            <children>
                               <Button mnemonicParsing="false" text="Standard" />
                               <Button disable="true" mnemonicParsing="false" text="Disabled" />
+                              <Separator orientation="VERTICAL" />
                               <ToggleButton mnemonicParsing="false" text="ToggleButton" />
                               <ToggleButton mnemonicParsing="false" selected="true" text="ToggleButton" />
                            </children>
@@ -69,8 +115,6 @@
                            <children>
                               <Button defaultButton="true" mnemonicParsing="false" text="Standard" />
                               <Button defaultButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
-                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
-                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
@@ -79,8 +123,6 @@
                            <children>
                               <Button cancelButton="true" mnemonicParsing="false" text="Standard" />
                               <Button cancelButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
-                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
-                              <ToggleButton mnemonicParsing="false" text="ToggleButton" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
@@ -282,14 +324,45 @@
                         <Label id="h1" text="Slider" />
                         <Separator prefWidth="200.0" />
                         <Label id="h2" text="Horizontal Slider" />
-                        <Slider />
+                        <Slider maxWidth="200.0" showTickLabels="true" showTickMarks="true" />
                         <Separator prefWidth="200.0" />
                         <Label id="h2" text="Vertical Slider" />
                         <HBox id="bordered">
                            <children>
-                              <Slider orientation="VERTICAL" value="0.815" />
+                              <Slider orientation="VERTICAL" showTickLabels="true" showTickMarks="true" value="0.815" />
                            </children>
                         </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Table">
+               <content>
+                  <VBox id="bordered">
+                     <children>
+                        <Label id="h1" text="Table" />
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="TableView" />
+                        <TableView editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn prefWidth="101.6666259765625" text="Username" />
+                            <TableColumn prefWidth="75.0" text="UUID" />
+                              <TableColumn prefWidth="90.33331298828125" text="Password" />
+                              <TableColumn prefWidth="76.66668701171875" text="Password2" />
+                              <TableColumn prefWidth="142.33331298828125" text="Info" />
+                          </columns>
+                        </TableView>
+                        <Separator prefWidth="200.0" />
+                        <Label id="h2" text="TreeTable" />
+                        <TreeTableView editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TreeTableColumn prefWidth="150.0" text="ID" />
+                            <TreeTableColumn minWidth="0.0" prefWidth="64.66668701171875" text="Message" />
+                              <TreeTableColumn prefWidth="74.33331298828125" text="Value" />
+                              <TreeTableColumn prefWidth="112.0" text="Priority" />
+                          </columns>
+                        </TreeTableView>
                         <Separator prefWidth="200.0" />
                      </children>
                   </VBox>
