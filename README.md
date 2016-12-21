@@ -8,6 +8,10 @@ Already includes most used UI elements, but still very work in progress.
 ![alt tag](src/test/resources/img/progressbar.png)
 ![alt tag](src/test/resources/img/slider.png)
 ![alt tag](src/test/resources/img/tableview.png)
+
+## Test it
+This theme included a small example application. Just start the class App at package "com.github.karlthebee.flatbee"
+
 ## How-To Theme
 - Change the basic theme color : Change the "-color" value in the theme at around line 14
 - Different html-like text sizes are available and in descending size : "h1", "h2", <standard>, "h3"

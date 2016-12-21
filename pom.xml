@@ -4,7 +4,7 @@
 
 	<groupId>com.github.karlthebee</groupId>
 	<artifactId>flatbee</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>16.12.1</version>
 	<packaging>jar</packaging>
 
 	<name>flatbee</name>
@@ -36,4 +36,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>A smooth &amp; flat looking jfx8 theme</description>
 </project>
