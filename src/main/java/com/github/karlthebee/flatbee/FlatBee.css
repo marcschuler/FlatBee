@@ -3,7 +3,7 @@
 * An javafx css style for a smooth & flat user interface
 * Website : github.com/karlthebee/flatbee
 *
-*	Version 16.12.0
+*	Version 16.12.2
 *
 * The license is pretty much a CC-BY-NC 4.0 license (https://creativecommons.org/licenses/by-nc/4.0/).
 * You can modify,use and share it (and ship it with your application), as long as you don't sell the file 
@@ -380,5 +380,16 @@
 }
 
 .tree-table-view>*.column-header-background>*.show-hide-columns-button{
+	-fx-background-color : -gray;
+}
+
+
+/*
+ * **********
+ * Color picker
+ * **********
+ * 
+ */
+.color-picker{
 	-fx-background-color : -gray;
 }

@@ -3,11 +3,8 @@ A flat and smooth looking css theme for JavaFX.
 Already includes most used UI elements, but still very work in progress.
 
 ## Preview
-![alt tag](src/test/resources/img/buttons.png)
-![alt tag](src/test/resources/img/checkbox.png)
-![alt tag](src/test/resources/img/progressbar.png)
-![alt tag](src/test/resources/img/slider.png)
-![alt tag](src/test/resources/img/tableview.png)
+![alt tag](src/test/resources/img/ui.png)
+More examples at "src/test/resources/img"
 
 ## Test it
 This theme included a small example application. Just start the class App at package "com.github.karlthebee.flatbee"
@@ -30,10 +27,11 @@ Should work :
 - Checkboxes & Radiobuttons
 - TextFields, Inputs, Spinner
 - (Tree-)Tables
+- Colorpicker
 
-Does not work : 
-- Not all default javafx8 nodes styled
-- Many nodes may look ugly and to green-ish
+Does not work :
+- Not all default javafx8 nodes are styled
+- Many nodes may look ugly and green-ish
 
 
 ## License
