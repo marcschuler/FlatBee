@@ -1,22 +1,47 @@
-# FlatBee
+# FlatBee v1.0.0
 A flat and smooth looking css theme for JavaFX.
-Already includes most used UI elements, but still very work in progress.
+Already includes the most used UI elements, but still very work in progress.
 
 ## Preview
 ![alt tag](src/test/resources/img/ui.png)
-More examples at "src/test/resources/img"
+More examples at ['src/test/resources/img'](https://github.com/KarlTheBee/FlatBee/tree/master/src/test/resources/img "Yes, there's the other images")
 
-## Test it
-This theme included a small example application. Just start the class App at package "com.github.karlthebee.flatbee"
+This theme includes a small example application. Just start the class App at package ['com.github.karlthebee.flatbee'](https://github.com/KarlTheBee/FlatBee/tree/master/src/main/java/com/github/karlthebee/flatbee "Yes, there's the other images")
 
-## How-To Theme
-- Change the basic theme color : Change the "-color" value in the theme at around line 14
-- Different html-like text sizes are available and in descending size : "h1", "h2", <standard>, "h3"
-- There's a "bordered" pane which sets an nice padding and spacing for an pane
+## Styling
+Aside from the quite nice theme, I've added a few options for a conistent design
+
+### Sizes
+FlatBee offers a few different sizes for every node. From smallest to biggest there are : 
+- flatbee-tiny
+- flatbee-small
+- flatbee-medium
+- flatbee-large
+- flatbee-xlarge
+- flatbee-xxlarge
+- flatbee-xxxlarge
+- flatbee-jumbo
+
+
+### Panels
+A panel adds a simple padding to an node
+
+### Containers
+A container is like a panel but includes spacing for each element
+
+### Cards
+A card is like a container but includes an nice show border
+![alt tag](src/test/resources/img/container.png)
+
+## Setup
+* Installing : Download the 'flatbee.css' file (or copy this repository) and paste the file into your workspace. Just the css file is needed, everything else is a nice package/demo
+* Changing the main color : At 'flatbee.css' set the '-color' value to your [color of choice](http://flatuicolors.com/ "A few flat colors to choose from")
+* ???
+* Profit (non-commercial)
 
 
 ## Progress
-Should work :
+Works :
 - Labels
 - Buttons (including toogle- & split-buttons)
 - Progressbars & Progressindicators
@@ -29,13 +54,12 @@ Should work :
 - (Tree-)Tables
 - Colorpicker
 
-Does not work :
+Problems/Bugs :
 - Not all default javafx8 nodes are styled
-- Many nodes may look ugly and green-ish
+- Third-party nodes may look ugly and/or green-ish
+- Other minor display bugs I didn't notice yet
 
 
 ## License
-
 The license is pretty much a CC-BY-NC 4.0 license (https://creativecommons.org/licenses/by-nc/4.0/).
-You can modify,use and share it (and ship it with your application), as long as you don't sell the file (or the application which includes the file).
-You also have to give me credit, like "FlatBee theme by karlthebee (github.com/karlthebee/flatbee)"
+In simple (non legal) english : you can modify and distribute it, ship in in your application, but not use/sell it commercially. And you have to give credits, like "FlatBee theme by karlthebee (https://github.com/karlthebee/flatbee)"

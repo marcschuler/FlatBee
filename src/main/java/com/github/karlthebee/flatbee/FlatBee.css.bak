@@ -435,6 +435,6 @@
 	-fx-background-color : -gray;
 }
 
-.scroll-pane>*.scroll-bar>*.thumb{
-	-fx-background-color : -color;
+.scroll-pane>*.scroll-var{
+	
 }

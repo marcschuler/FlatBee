@@ -16,6 +16,7 @@
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.Slider?>
@@ -31,7 +32,6 @@
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
@@ -40,34 +40,76 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="root" prefHeight="427.0" prefWidth="558.0" stylesheets="@FlatBee.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.karlthebee.flatbee.FlatBeeController">
+<BorderPane fx:id="root" prefHeight="539.0" prefWidth="494.0" stylesheets="@FlatBee.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.karlthebee.flatbee.FlatBeeController">
    <center>
       <TabPane tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="FlatBee">
                <content>
-                  <VBox id="bordered" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label id="h1" text="FlatBee" />
-                        <Separator prefWidth="200.0" />
-                        <Label text="Hello and welcome to our FlatBee example.&#10;Here you can see various containers, controls, menus, etc." wrapText="true" />
-                        <Separator prefWidth="200.0" />
-                        <Hyperlink text="https://github.com/karlthebee/flatbee" />
-                        <Hyperlink text="https://twitter.com/karlthebee" />
-                        <Hyperlink text="karlthebee@gmail.com" />
-                        <Separator prefWidth="200.0" />
-                     </children>
-                  </VBox>
+                  <ScrollPane fitToWidth="true" minWidth="-Infinity">
+                     <content>
+                        <VBox id="flatbee-container">
+                           <children>
+                              <Label id="flatbee-xlarge" text="FlatBee" />
+                              <Separator prefWidth="200.0" />
+                              <VBox id="flatbee-card">
+                                 <children>
+                                    <Label text="Hello and welcome to our FlatBee example.&#10;Here you can see various containers, controls, menus, etc." wrapText="true" />
+                                    <Separator prefWidth="200.0" />
+                                    <Hyperlink text="https://github.com/karlthebee/flatbee" />
+                                    <Hyperlink text="https://twitter.com/karlthebee" />
+                                    <Hyperlink text="karlthebee@gmail.com" />
+                                 </children>
+                              </VBox>
+                              <Separator prefWidth="200.0" />
+                              <VBox id="flatbee-container">
+                                 <children>
+                                    <Label id="flatbee-xlarge" text="Container, Panel, Cards" />
+                                    <Separator prefWidth="200.0" />
+                                    <VBox id="flatbee-panel">
+                                       <children>
+                                          <Label id="flatbee-large" text="Panel" />
+                                          <Label text="A panel adds a simple padding to an node" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="flatbee-container">
+                                       <children>
+                                          <Label id="flatbee-large" text="Container" />
+                                          <Label text="A container is like a panel but includes spacing for each element" />
+                                          <VBox id="flatbee-card">
+                                             <children>
+                                                <Label id="flatbee-large" text="Card" />
+                                                <Label text="A card is like a container but includes an nice show border" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                              <VBox id="flatbee-container">
+                                 <children>
+                                    <Label id="flatbee-xlarge" text="Sizes" />
+                                    <Separator prefWidth="200.0" />
+                                    <Label id="flatbee-large" text="Different sizes" />
+                                    <Label text="FlatBee offers a few different sizes for every node. From smallest to biggest there are : &#10;- flatbee-tiny&#10;- flatbee-small&#10;- flatbee-medium&#10;- flatbee-large&#10;- flatbee-xlarge&#10;- flatbee-xxlarge&#10;- flatbee-xxxlarge&#10;- flatbee-jumbo" wrapText="true" />
+                                    <Separator prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
                </content>
             </Tab>
             <Tab text="Demo">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="FlateBee Demo" />
+                        <Label id="flatbee-xlarge" text="FlateBee Demo" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Register" />
-                        <GridPane alignment="CENTER_LEFT" maxHeight="100.0" maxWidth="300.0" minHeight="100.0">
+                        <Label id="flatbee-large" text="Register" />
+                        <GridPane id="flatbee-card" alignment="CENTER_LEFT" maxHeight="100.0" maxWidth="300.0" minHeight="100.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="111.33331298828125" />
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.66668701171875" minWidth="10.0" prefWidth="188.66668701171875" />
@@ -83,12 +125,12 @@
                               <Label text="Password : " GridPane.rowIndex="1" />
                               <PasswordField text="FlatBee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label text="Date of Birth : " GridPane.rowIndex="2" />
-                              <DatePicker minWidth="-Infinity" prefWidth="188.0" promptText="Bots : No lying!" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <DatePicker minWidth="-Infinity" promptText="Bots : No lying!" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Account info" />
-                        <Accordion maxHeight="135.0">
+                        <Label id="flatbee-large" text="Account info" />
+                        <Accordion id="flatbee-container" maxHeight="135.0">
                           <panes>
                             <TitledPane text="Mail">
                               <content>
@@ -99,29 +141,44 @@
                                              <children>
                                                 <Label text="Amount of spam : " />
                                                 <Slider value="90.0" />
-                                                <Label id="h3" text="Huge amount" />
+                                                <Label id="flatbee-tiny" text="Huge amount" />
                                              </children>
                                           </HBox>
                                        </children>
                                     </VBox>
                               </content>
                             </TitledPane>
-                            <TitledPane animated="false" text="Payment">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
+                            <TitledPane text="Payment">
+                                 <content>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="PayPal" />
+                                          <RadioButton mnemonicParsing="false" text="Credit card" />
+                                          <RadioButton mnemonicParsing="false" text="Drugs" />
+                                       </children>
+                                    </VBox>
+                                 </content>
                             </TitledPane>
-                            <TitledPane animated="false" text="Voucher">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
+                            <TitledPane text="Voucher">
+                                 <content>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <Label text="Enter code : " />
+                                                <TextField />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
                             </TitledPane>
                           </panes>
                         </Accordion>
                         <HBox alignment="CENTER_LEFT" spacing="10.0">
                            <children>
                               <ProgressBar prefWidth="200.0" progress="0.42" />
-                              <Label id="h3" text="42% complete" />
+                              <Label id="flatbee-tiny" text="42% profil complete" />
                            </children>
                         </HBox>
                         <Button mnemonicParsing="false" text="Register" />
@@ -131,12 +188,12 @@
             </Tab>
             <Tab text="Buttons">
                <content>
-                  <VBox id="bordered" mouseTransparent="true" prefHeight="200.0" prefWidth="100.0">
+                  <VBox id="flatbee-container" mouseTransparent="true" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label id="h1" text="Buttons" />
+                        <Label id="flatbee-xlarge" text="Buttons" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Standard" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Standard" />
+                        <HBox id="flatbee-container">
                            <children>
                               <Button mnemonicParsing="false" text="Standard" />
                               <Button disable="true" mnemonicParsing="false" text="Disabled" />
@@ -146,16 +203,16 @@
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Default" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Default" />
+                        <HBox id="flatbee-container">
                            <children>
                               <Button defaultButton="true" mnemonicParsing="false" text="Standard" />
                               <Button defaultButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Cancel" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Cancel" />
+                        <HBox id="flatbee-container">
                            <children>
                               <Button cancelButton="true" mnemonicParsing="false" text="Standard" />
                               <Button cancelButton="true" disable="true" mnemonicParsing="false" text="Disabled" />
@@ -165,35 +222,21 @@
                      </children>
                   </VBox>
                </content></Tab>
-          <Tab text="Labels">
-               <content>
-                  <VBox id="bordered">
-                     <children>
-                        <Label id="h1" text="Labels" />
-                        <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Label Types" />
-                        <Label text="FlatBee offers three different kinds of custom labels, which you can select via an id  :&#10;     1. h1 : An label for headlines (like the &quot;Labels&quot; label)&#10;     2. h2 : An bigger label (like &quot;Label Types&quot;)&#10;     3. The normal label (like this!)&#10;     4. h4 : An very small info label" wrapText="true" />
-                        <Separator prefWidth="200.0" />
-                        <Label id="h3" text="And the h4 label is very small!" />
-                     </children>
-                  </VBox>
-               </content>
-            </Tab>
             <Tab text="Checkboxes">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Checkboxes" />
+                        <Label id="flatbee-xlarge" text="Checkboxes" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="CheckBoxes" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="CheckBoxes" />
+                        <HBox id="flatbee-container">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Standard" />
                               <CheckBox mnemonicParsing="false" selected="true" text="Selected" />
                               <CheckBox indeterminate="true" mnemonicParsing="false" text="Indeterminate" />
                            </children>
                         </HBox>
-                        <HBox id="bordered">
+                        <HBox id="flatbee-container">
                            <children>
                               <CheckBox disable="true" mnemonicParsing="false" text="Standard" />
                               <CheckBox disable="true" mnemonicParsing="false" selected="true" text="Selected" />
@@ -207,18 +250,18 @@
             </Tab>
             <Tab text="RadioButtons">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="RadioButtons" />
+                        <Label id="flatbee-xlarge" text="RadioButtons" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="RadioButtons" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="RadioButtons" />
+                        <HBox id="flatbee-container">
                            <children>
                               <RadioButton mnemonicParsing="false" text="Standard" />
                               <RadioButton mnemonicParsing="false" selected="true" text="Selected" />
                            </children>
                         </HBox>
-                        <HBox id="bordered">
+                        <HBox id="flatbee-container">
                            <children>
                               <RadioButton mnemonicParsing="false" text="Standard" />
                               <RadioButton mnemonicParsing="false" selected="true" text="Selected" />
@@ -231,32 +274,32 @@
             </Tab>
             <Tab text="Progress">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Progress" />
+                        <Label id="flatbee-xlarge" text="Progress" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Progressbar" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Progressbar" />
+                        <HBox id="flatbee-container">
                            <children>
                               <ProgressBar prefWidth="200.0" />
                               <ProgressBar prefWidth="200.0" progress="0.5" />
                            </children>
                         </HBox>
-                        <HBox id="bordered">
+                        <HBox id="flatbee-container">
                            <children>
                               <ProgressBar disable="true" prefWidth="200.0" />
                               <ProgressBar disable="true" prefWidth="200.0" progress="0.5" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Progress indicator" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Progress indicator" />
+                        <HBox id="flatbee-container">
                            <children>
                               <ProgressIndicator prefHeight="26.0" prefWidth="28.0" />
                               <ProgressIndicator progress="0.5" />
                            </children>
                         </HBox>
-                        <HBox id="bordered" />
+                        <HBox id="flatbee-container" />
                         <Separator prefWidth="200.0" />
                      </children>
                   </VBox>
@@ -264,23 +307,23 @@
             </Tab>
             <Tab text="Input">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Input" />
+                        <Label id="flatbee-xlarge" text="Input" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="TextField" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="TextField" />
+                        <HBox id="flatbee-container">
                            <children>
                               <TextField promptText="Ipsum Lorem" />
                               <Spinner editable="true" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="TextArea" />
+                        <Label id="flatbee-large" text="TextArea" />
                         <TextArea prefHeight="44.0" prefWidth="537.0" promptText="Lorem ipsum" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="PasswordField" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="PasswordField" />
+                        <HBox id="flatbee-container">
                            <children>
                               <PasswordField promptText="Ipsum Ipsum" />
                               <PasswordField disable="true" promptText="Lorem ipsum!" />
@@ -293,11 +336,11 @@
             </Tab>
             <Tab text="Menu">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Menu" />
+                        <Label id="flatbee-xlarge" text="Menu" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Menu" />
+                        <Label id="flatbee-large" text="Menu" />
                         <MenuBar>
                           <menus>
                             <Menu mnemonicParsing="false" text="Lorem">
@@ -331,8 +374,8 @@
                           </menus>
                         </MenuBar>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="MenuButtons" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="MenuButtons" />
+                        <HBox id="flatbee-container">
                            <children>
                               <MenuButton mnemonicParsing="false" text="MenuButton">
                                 <items>
@@ -355,15 +398,15 @@
             </Tab>
             <Tab text="Slider">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Slider" />
+                        <Label id="flatbee-xlarge" text="Slider" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Horizontal Slider" />
+                        <Label id="flatbee-large" text="Horizontal Slider" />
                         <Slider maxWidth="200.0" showTickLabels="true" showTickMarks="true" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Vertical Slider" />
-                        <HBox id="bordered">
+                        <Label id="flatbee-large" text="Vertical Slider" />
+                        <HBox id="flatbee-container">
                            <children>
                               <Slider orientation="VERTICAL" showTickLabels="true" showTickMarks="true" value="0.815" />
                            </children>
@@ -375,11 +418,11 @@
             </Tab>
             <Tab text="Table">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Table" />
+                        <Label id="flatbee-xlarge" text="Table" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="TableView" />
+                        <Label id="flatbee-large" text="TableView" />
                         <TableView editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
                           <columns>
                             <TableColumn prefWidth="101.6666259765625" text="Username" />
@@ -390,7 +433,7 @@
                           </columns>
                         </TableView>
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="TreeTable" />
+                        <Label id="flatbee-large" text="TreeTable" />
                         <TreeTableView editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
                           <columns>
                             <TreeTableColumn prefWidth="150.0" text="ID" />
@@ -406,17 +449,17 @@
             </Tab>
             <Tab text="Diverse">
                <content>
-                  <VBox id="bordered">
+                  <VBox id="flatbee-container">
                      <children>
-                        <Label id="h1" text="Diverse" />
+                        <Label id="flatbee-xlarge" text="Diverse" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="ColorPicker" />
+                        <Label id="flatbee-large" text="ColorPicker" />
                         <ColorPicker />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="Hyperlink" />
+                        <Label id="flatbee-large" text="Hyperlink" />
                         <Hyperlink text="github.com/karlthebee/flatbee" />
                         <Separator prefWidth="200.0" />
-                        <Label id="h2" text="DatePicker" />
+                        <Label id="flatbee-large" text="DatePicker" />
                         <DatePicker />
                         <Separator prefWidth="200.0" />
                      </children>
